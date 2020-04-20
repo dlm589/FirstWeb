@@ -222,10 +222,10 @@ fetch(myRequest)
 
 */
 console.log("This js file is working!");
-fetch("./Age_BothSex_Province.json")
+fetch("Age_BothSex_Province.json")
   .then(function(resp){
     return resp.json();
   })
   .then(function(data){
-    console.log(data.PRUID)
+    console.log(data)
   })
