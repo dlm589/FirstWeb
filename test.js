@@ -221,7 +221,7 @@ fetch(myRequest)
 
 
 */
-fetch("https://github.com/dlm589/CensusAnalysis/blob/master/Age_BothSex_Province.json")
+fetch("./Age_BothSex_Province.json")
   .then(function(resp){
     return resp.json();
   })
