@@ -5,6 +5,10 @@ fetch("Age_Male_DA.json")
   })
   .then(function(data){
     data.forEach((item, i) => {
-      console.log(data);
+      if (data[i]['DAUID']==10010797)
+      {
+        console.log(data[i]['10 to 14 years']);
+      }
     });
   });
+console.log("Hello");
