@@ -222,10 +222,15 @@ fetch(myRequest)
 
 */
 console.log("This js file is working!");
-fetch("Age_BothSex_Province.json")
+fetch("Age_Male_DA.json")
   .then(function(resp){
     return resp.json();
   })
   .then(function(data){
-    console.log(data)
-  })
+    data.forEach((item, i) => {
+      if (data[i]['DAUID']==1009)
+      {
+        console.log(data[i]['field']);
+      }
+    });
+  });
