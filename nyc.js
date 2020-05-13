@@ -94,7 +94,24 @@ map.on("mouseenter","bike",function(e){
 map.on("mouseleave","bike",function(e){
     map.getCanvas().style.cursor = ""; //go back to the null cursor
   });
+
 map.on("click", "bike", function(e){
+
+    if (e.features.length > 0)
+    {
+        
+      // ==============Create New Graph of the newly selected area ===================
+        var features = map.queryRenderedFeatures(e.point, {
+            "layers": ["bike"]}
+        );
+
+
+
+
+
+
+
+
   //if there is a feature there, do the following
 
   var day;
@@ -111,7 +128,7 @@ map.on("click", "bike", function(e){
                     "<b>Ride Count: </b> " + feature.properties.BikeTrip_5);
       popup.addTo(map); //finally add the pop up to the map
   }
+}
 });
-
 
 //hiistograms
