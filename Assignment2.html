@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <meta charset=utf-8 />
+   <title>TITLE HERE – shows up in browser tab</title>
+   <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />  <!-- Adjusts the screen width to the device accessing the web map -->
+   <script src="https://api.mapbox.com/mapbox-gl-js/v1.7.0/mapbox-gl.js"></script> <!-- Sets up Mapbox GL JS -->
+   <link href="https://api.mapbox.com/mapbox-gl-js/v1.7.0/mapbox-gl.css" rel="stylesheet" /> <!-- Sets up Mapbox GL JS -->
+   <!-- below - in file CSS browser set up -->
+   <style>
+      body { margin:0; padding:0; }
+      .map { position:absolute; top:0; bottom:0; width:100%; }
+      .legend {
+          background-color: #fff;
+          border-radius: 5px;
+          bottom: 30px;
+          box-shadow: 0 1px 2px rgba(0, 0, 0, 30);
+          font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
+          padding: 10px;
+          position: absolute;
+          right: 10px;
+          z-index: 1;
+          }
+
+          .legend h4 {
+          margin: 0 0 10px;
+          }
+
+          .legend div span {
+          border: 50%;
+          display: inline-block;
+          height: 10px;
+          margin-right: 5px;
+          width: 10px;
+          }
+   </style>
+</head>
+<body>  <!-- where we put our javascript code -->
+   <div id='map' class='map'> </div>  <!-- browser set up -->
+   <div id="map"></div>
+   <!-- The Legend Goes Here -->
+  <div id="Building Height" class="legend">
+  <h4>Building Height (Meters)</h4>
+  <div><span style="background-color: #fcfbfd"></span>0   - 4</div>
+  <div><span style="background-color: #efedf5"></span>5   - 9</div>
+  <div><span style="background-color: #dadaeb"></span>10  - 19</div>
+  <div><span style="background-color: #bcbddc"></span>20  - 39</div>
+  <div><span style="background-color: #9e9ac8"></span>40  - 69</div>
+  <div><span style="background-color: #807dba"></span>70  - 89</div>
+  <div><span style="background-color: #6a51a3"></span>90  - 119</div>
+  <div><span style="background-color: #54278f"></span>120 - 299</div>
+  <div><span style="background-color: #3f007d"></span>300 - 553</div>
+  <br>
+  <h4>Zoning Height (Meters)</h4> <!--the layer property is specified above-->
+  <div><span style="background-color: #a50f15"></span>5   - 9</div>
+  <div><span style="background-color: #de2d26"></span>10  - 34</div>
+  <div><span style="background-color: #fb6a4a"></span>35  - 54</div>
+  <div><span style="background-color: #fc9272"></span>55  - 69</div>
+  <div><span style="background-color: #fcbba1"></span>70  - 99</div>
+  <div><span style="background-color: #fee5d9"></span>100 - 137</div>
+  </div>
+
+
+   <script src='https://github.com/dlm589/FirstWeb/blob/master/Assignment2.js'></script> <!-- "./" means current directory, so if you put your code elsewhere use that path -->
+</body>
+</html>
